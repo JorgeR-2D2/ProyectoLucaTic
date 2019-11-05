@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title> Registro de usuario</title>
+      	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      	
+    </head>
+    <body>
+    
+		<h1>BIENVENIDO A LUCATINDER</h1>
+		
+		<form th:action="@{/}" th:object="${usuario}"
+			method="post">
+			<div>
+				Usuario: <input type="text" th:field="*{username}" />
+			</div>
+			<div>
+				Contraseña: <input type="password" th:field="*{password}" />
+			</div>
+			<div>
+				<p th:text="${status}"></p>
+			</div>
+			<div>
+				<input type="submit" value="Login" />
+			</div>		
+		</form>
+   		<P>Aún no te has registrado? Registrate <a href="/alta"> aquí.</a></P>	
+    </body>
+</html>

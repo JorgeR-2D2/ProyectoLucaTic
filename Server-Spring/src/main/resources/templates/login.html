@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Registro de usuario</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+</head>
+<body
+	th:style="'background: url(/img/background.jpg) no-repeat center center fixed;'">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" style="margin-left: 2%" th:href="@{/}"><h1>LucaTinder</h1></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="true" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+
+
+		<div class="collapse navbar-collapse collapse justify-content-end"
+			style="margin-right: 3%">
+			<span class="navbar-text" th:text=${status}> </span>
+		</div>
+
+	</nav>
+
+	<form th:action="@{/}" th:object="${usuario}" method="post">
+		<div class="form-group" align="center"
+			style="padding-top: 5%; text-align: center">
+			<div style="padding: 1%">
+				<h3>
+					Username: <input type="text" th:field="*{username}" required />
+				</h3>
+			</div>
+			<div style="padding: 1%">
+				<h3>
+					Password: <input type="password" th:field="*{password}" minlength=6
+						maxlength=12 required />
+				</h3>
+			</div>
+			<div style="padding: 1%">
+				<button class="btn btn-success" style="margin-right: 2rem"
+					type="submit">Aceptar</button>
+				<button class="btn btn-danger" type="reset">Reset</button>
+			</div>
+			<h4>
+				Aún no te has registrado? Registrate <a href="/alta"> aquí.</a>
+			</h4>
+		</div>
+
+	</form>
+
+
+
+</body>
+</html>
