@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a (click)="listadoInicial()" class="navbar-brand" style="margin-left: 2%;color: blanchedalmond;"><h1>LucaTinder</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse collapse justify-content-end" style="padding-right: 2%;">
+    <span style="margin-left:1%" class="navbar-text"> Donde ligan los que no ligan </span>
+  </div>
+
+    <div class="collapse navbar-collapse collapse justify-content-center"
+                id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+    
+                    <li (click)="perfil" class="nav-item"><a class="nav-link" >Perfil</a></li>
+                    <li (click)="listadoContactos()" class="nav-item"><a class="nav-link" >Contactos</a></li>
+                    <li (click)="listadoDescartes()" class="nav-item"><a class="nav-link" >Descartes</a>
+                    <li (click)="listadoMatches()" class="nav-item"><a class="nav-link" >Matches</a></li>
+                    <li (click)="logOut" class="nav-item"><a class="nav-link" >LogOut</a></li>
+                </ul>
+            </div>
+      
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,27 @@
+
+        <table class="table table-hover" style="margin-left:12%">
+            <tr *ngFor="let usuario of usuarios">
+            <div class="container" style="justify-content-end">
+                <div class="row" >
+                    <div class="col-sm">
+                        <div  class="card" style="width: 40rem; margin-top: 2%; margin-bottom:2%">
+    
+                            <div>
+                            <div class="card-header" style="float: left; width: 40%;padding-bottom:5%">
+                                <img src="../../../assets/img/user.png" style="width:80%">
+                            </div>
+                            <div class="card-body" style="float: right; width: 55%">
+                                <h4 class="card-title">{{usuario.nombre}}</h4>
+                                <p class="card-text" >Edad: {{usuario.edad}}</p>
+                                <p class="card-text">Genero: {{usuario.genero}}</p>
+                                <div class="container">
+                                
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </tr>     
+        </table>
